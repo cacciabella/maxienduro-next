@@ -1,0 +1,235 @@
+/* src/Hero.css */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+.hero-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  padding: 1rem;
+  top: 350px;
+  animation: fadeIn 0.5s ease-in-out both; 
+  animation-delay: 0.3s;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }}
+.hero-content h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.hero-content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.hero-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Navbar container fixed at top */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(107, 105, 105, 0.5);
+  animation: fadeIn 0.5s ease-in-out both; 
+  animation-delay: 0.3s;
+}
+
+/* Navbar with logo and toggle button */
+.navbar {
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 60px;
+  overflow-x: hidden;
+  
+}
+
+.navbar-toggler {
+  background: none;
+  border: none;
+  margin-right: 30px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+/* Menu a discesa */
+.menu-dropdown {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.menu-dropdown.open {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-item {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.navbar-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar-link:hover {
+  color: #ff7f50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 900px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    position: relative;
+    color: #fff;
+    padding: 1rem;
+    top: 40px;
+  }
+  
+  .hero-content h4 {
+    font-size: 1.25rem;
+  }
+  
+  .hero-btn {
+    position: relative;
+    top: 30px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.80rem;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 900px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content h4 {
+    font-size: 1rem;
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-down span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: scroll-down 2s infinite;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 2;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
