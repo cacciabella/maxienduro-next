@@ -14,7 +14,7 @@ const Hero = React.forwardRef(({ scrollToAboutUs }, ref) => {
     { name: 'Chi Sono', path: 'AboutMe' },
     { name: 'Eventi', path: 'calendarEvent'},
     { name: 'Contatti', path: 'contatti' }
-  ];
+  ]; 
   
   return (
     <div className="hero" style={{ backgroundImage: `url(/img/foto_header.jpg)`}}>
