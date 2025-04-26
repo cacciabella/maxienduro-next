@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     // Add a home section identifier to make scrollIntoView work
-    const homeSection = document.getElementById('home-section');
+    const homeSection = document.getElementById('home');
     if (homeSection) {
       homeSection.scrollIntoView({ behavior: 'smooth' });
     }
